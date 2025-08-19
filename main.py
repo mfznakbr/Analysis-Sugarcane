@@ -11,7 +11,7 @@ num = ['Time_spent_Alone', 'Social_event_attendance', 'Going_outside', 'Friends_
 
 with st.sidebar:
     # adding logo
-    st.image('blabla')
+    # st.image('blabla')
 
     # input for user
     st.title('Input Data')
@@ -26,6 +26,7 @@ with st.sidebar:
     going_outside = st.number_input("Frekuensi Keluar Rumah", min_value=0.0, value=3.0)
     friends_circle_size = st.number_input("Ukuran Lingkaran Teman", min_value=0.0, value=2.0)
     post_frequency = st.number_input("Frekuensi Posting", min_value=0.0, value=1.0)
+
 
 # EXPLORATORY DATA ANALYSIS
 st.title('Exploratory Data Analysis')
