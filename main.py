@@ -6,6 +6,7 @@ import streamlit as st
 # import function
 from EDA import univariate_analysis, univariate_numeric
 from evaluasi import processing, prediction
+from run_model import main
 
 df = pd.read_csv('https://raw.githubusercontent.com/mfznakbr/Eksperimen_SML_Muhammad-Fauzani-Akbar/main/personality_datasert.csv')
 print(df.head())
@@ -49,11 +50,8 @@ with st.sidebar:
     input_df = pd.DataFrame([input_data])
 
     if st.button("Predict"):
-        new_data = processing(input_df)
-        prediction_result = prediction(new_data)
-        st.write(prediction_result)
-        prediction_value = prediction_result["predictions"][0]
-        if prediction_value == 1:  
+        result = main(input_df)
+        if result == 1:  
             st.success("Prediksi: Introvert")
         else:
             st.success("Prediksi: Ekstrovert")
