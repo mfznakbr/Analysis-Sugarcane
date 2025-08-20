@@ -5,7 +5,6 @@ import streamlit as st
 
 # import function
 from EDA import univariate_analysis, univariate_numeric
-from evaluasi import processing, prediction
 from run_model import main
 
 df = pd.read_csv('https://raw.githubusercontent.com/mfznakbr/Eksperimen_SML_Muhammad-Fauzani-Akbar/main/personality_datasert.csv')
