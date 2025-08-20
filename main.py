@@ -53,8 +53,10 @@ with st.sidebar:
         result = main(input_df)
         if result == 1:  
             st.success("Prediksi: Introvert")
+            st.image('https://raw.githubusercontent.com/mfznakbr/Analysis-Sugarcane/main/pic/me.jpg')
         else:
             st.success("Prediksi: Ekstrovert")
+            st.image('https://raw.githubusercontent.com/mfznakbr/Analysis-Sugarcane/main/pic/yow.jpg')
 
  # Univariate analysis for Stage_fear
 
