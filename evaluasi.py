@@ -2,7 +2,6 @@ from joblib import load
 import pandas as pd 
 import json
 import requests
-import joblib
 
 df = pd.read_csv('https://raw.githubusercontent.com/mfznakbr/Eksperimen_SML_Muhammad-Fauzani-Akbar/main/personality_datasert.csv')
 data = df.sample(n=10, random_state=42)
