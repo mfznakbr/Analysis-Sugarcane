@@ -18,7 +18,7 @@ num = ['Time_spent_Alone', 'Social_event_attendance', 'Going_outside', 'Friends_
 # SIDE BAR FOR PREDICT AND FILTER EDA
 with st.sidebar:
     # adding logo
-    # st.image('blabla')
+    st.image('https://raw.githubusercontent.com/mfznakbr/Analysis-Sugarcane/main/pic/logo_nav.png')
 
     # input for user
     st.header("Ayo, isi data kamu!")
