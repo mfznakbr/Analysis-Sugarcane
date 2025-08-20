@@ -21,11 +21,12 @@ with st.sidebar:
     # st.image('blabla')
 
     # input for user
-    st.title('Input Data')
+    st.header("Ayo, isi data kamu!")
+    st.write('Input data dengan benar sesuai dengan kolom yang ada, jika numerik usahakan berada pada rentang 1-15')
 
     # Category input
-    Stage_fear = st.selectbox('Stage_fear', df['Stage_fear'].unique())
-    Drained_after_socializing = st.selectbox('Perasaan setelah bersosialisasi', df['Drained_after_socializing'].unique())
+    Stage_fear = st.selectbox('Apakah gugup didepan umum?', df['Stage_fear'].unique())
+    Drained_after_socializing = st.selectbox('Apakah merasa lelah setelah bersosialisasi', df['Drained_after_socializing'].unique())
 
     # Numeric Input 
     time_spent_alone = st.number_input("Waktu Sendirian", min_value=0.0, value=9.0)
@@ -59,10 +60,20 @@ with st.sidebar:
 
 # EXPLORATORY DATA ANALYSIS
 
-st.title('Personality Predict')
-st.write('This is a simple app to predict personality using machine learning.')
+st.title('Prediksi Kepribadian Berdasarkan Jawaban')
+
+st.write("""
+Selamat datang di **Personality Predict**! 🎉  
+Aplikasi sederhana ini menggunakan machine learning untuk memprediksi tipe kepribadian kamu berdasarkan jawaban dari beberapa pertanyaan.  
+
+Dengan menganalisis pola dari jawabanmu, model ini bisa memberikan wawasan tentang sifat, kekuatan, dan area yang bisa kamu kembangkan.  
+
+Cukup isi formulir di bawah, klik **Predict**, dan lihat hasil prediksi kepribadianmu secara instan.  
+Aplikasi ini bersifat edukatif dan hiburan, untuk membantu kamu lebih mengenal diri sendiri.
+""")
+
  
-st.subheader("Customer Demographics")
+st.subheader("Univariate Analysis Terhadap Kolom Kategori dan Numerik")
 # Univariate analysis for Stage_fear
 col1, col2 = st.columns(2)
 col3, col4= st.columns(2)

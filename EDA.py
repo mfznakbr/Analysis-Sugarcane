@@ -26,6 +26,10 @@ def univariate_analysis(IndexColumn, col):
     percent = 100 * df[feature].value_counts(normalize=True)
     count_percent = pd.DataFrame({'count': count, 'percent': percent})
     count_percent = count_percent.reset_index()
+    if IndexColumn == 0:
+        nama = "takut atau gugup saat tampil di depan umum"
+    else:
+        nama = "lelah perasaan setelah bersosialisasi"
 
     with col:
         fig, ax = plt.subplots(figsize=(20, 10))
@@ -37,7 +41,7 @@ def univariate_analysis(IndexColumn, col):
             palette=colors,
             ax=ax
         )
-        ax.set_title(f"Number of People by {feature}", loc="center", fontsize=50)
+        ax.set_title(f"Jumlah {nama}", loc="center", fontsize=50)
         ax.set_ylabel(None)
         ax.set_xlabel(None)
         ax.tick_params(axis='x', labelsize=35)
